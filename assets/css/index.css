@@ -37,10 +37,9 @@ header.flex-header div {
 } */
 
 /* Header Menu config */
-header.flex-header nav ul li {
-  list-style: none;
-}
+
 header.flex-header nav ul {
+  list-style: none;
   display: flex;
   flex-direction: row;
   margin: 0rem 2rem;
@@ -48,20 +47,100 @@ header.flex-header nav ul {
   /* background-color: yellow; */
 }
 header.flex-header nav ul li a {
-  color: #fff;
   text-decoration: none;
-
   margin: 0rem 2rem;
+  font-size: 1.3rem;
+
+  color: #8F9BB7;
+  transition: 1s;
+  /* background-color: pink; */
+}
+header.flex-header nav ul li a:hover {
+ font-size: 1.8rem;
+  color: #fff;
+ 
 
   /* background-color: pink; */
 }
 /* Header --End */
 
-/* Secction --Start */
+/* Section --Start */
 section {
-  width: 100%;
-  height: 933px;
+  display: flex;  
+  max-width: 100%;
+  height: 974.07px;
+
+  position: relative;
+  overflow-x: hidden;
+
 
   /* background-color: red; */
 }
-/* Secction --End */
+
+/* Container div --Start */
+div.first-container{
+width: 100%;
+height: 100%;
+
+position: absolute;
+background-color: red;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+}
+div.content{
+  width: 70%;
+  height: 90%;
+
+  background-color: yellow;
+}
+/* Container div --End */
+/* Background div --Start */
+div.left-side {
+  width: 50%;
+  height: 100%;
+
+  position: relative;
+  z-index: -1;
+ 
+}
+div.left-bg{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  bottom: 25%;
+  right: 40%;
+
+  background: radial-gradient(circle, rgba(114,20,255,.15) 0%, transparent 50%);
+
+  z-index: -2;
+ 
+}
+div.right-side {
+  width: 50%; 
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  z-index: -1;
+}
+
+div.right-bg{
+  width: 100%;
+  height: 100%;
+  bottom: 10%;
+  position: absolute;
+  left: 40%;
+
+  background: radial-gradient(circle, rgba(50,202,253,.1) 0%, transparent 50%);
+
+  z-index: -2;
+ 
+}
+/* Background div --End */
+
+/* Section --End */
