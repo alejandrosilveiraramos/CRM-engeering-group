@@ -1,12 +1,44 @@
 /* Buttons --Start*/
 .primary-btn {
   background-color: #7214ff;
+  color: #fff;
+
+  padding: 1rem 1.8rem;
+  border: 0.1rem solid #7214ff;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.primary-btn:hover {
+  background-color: transparent;
+  color: #fff;
+
+  padding: 1rem 1.8rem;
+  border: 0.1rem solid #7214ff;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 0px #000000, inset 10px 10px 1px 0px #000000,
+    0px 0px 20px 1px rgba(0, 0, 0, 0);
+}
+
+.secondary-btn {
+  background-color: transparent;
 
   color: #fff;
 
   padding: 1rem 1.8rem;
-  border: none;
+  border: 0.1rem solid #8f9bb7;
   border-radius: 25px;
+  transition: 0.5s;
+}
+.secondary-btn:hover {
+  background-color: #8f9bb7;
+  color: #fff;
+
+  padding: 1rem 1.8rem;
+  border: 0.1rem solid #8f9bb7;
+  border-radius: 25px;
+
+  box-shadow: 5px 5px 5px 0px #000000, inset 10px 10px 1px 0px #545b6d,
+    0px 0px 20px 1px rgba(0, 0, 0, 0);
 }
 
 /* Buttons --End*/

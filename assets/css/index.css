@@ -9,26 +9,32 @@
 html {
   font-size: 62.5%;
   font-family: "Inter", sans-serif;
-
   background-color: #060b27;
 }
 
-/* Config universal --End */
+@media screen and (max-width: 1110px) {
+  div.content-header {
+    width: 85%;
+  }
+  div.right-bg {
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  div.content-header {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.content-header {
+    width: 100%;
+    margin: 2rem;
+  }
+}
 
 /* Header --Start */
-
-/* Header row align --Start*/
-header.flex-header {
-  display: flex;
-
-  justify-content: space-between;
-  align-items: center;
-
-  flex-wrap: wrap;
-  padding: 2rem 20rem;
-
-  background-color: #060b27;
-}
 
 /* Check Header Div
 
@@ -37,6 +43,20 @@ header.flex-header div {
 } */
 
 /* Header Menu config */
+
+header.flex-header {
+  margin: 0rem 10rem;
+  display: flex;
+}
+div.content-header {
+  /* background-color: red; */
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+}
 
 header.flex-header nav ul {
   list-style: none;
@@ -51,14 +71,13 @@ header.flex-header nav ul li a {
   margin: 0rem 2rem;
   font-size: 1.3rem;
 
-  color: #8F9BB7;
+  color: #8f9bb7;
   transition: 1s;
   /* background-color: pink; */
 }
 header.flex-header nav ul li a:hover {
- font-size: 1.8rem;
+  font-size: 1.8rem;
   color: #fff;
- 
 
   /* background-color: pink; */
 }
@@ -66,37 +85,72 @@ header.flex-header nav ul li a:hover {
 
 /* Section --Start */
 section {
-  display: flex;  
+  display: flex;
   max-width: 100%;
   height: 974.07px;
 
   position: relative;
   overflow-x: hidden;
 
-
   /* background-color: red; */
 }
 
 /* Container div --Start */
-div.first-container{
-width: 100%;
-height: 100%;
+div.first-container {
+  width: 100%;
+  height: 100%;
 
-position: absolute;
-background-color: red;
+  position: absolute;
 
-display: flex;
+  display: flex;
 
-align-items: center;
+  align-items: center;
 
-justify-content: center;
+  justify-content: center;
+  /* background-color: red; */
 }
-div.content{
+div.content {
   width: 70%;
   height: 90%;
 
-  background-color: yellow;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+
+  /* background-color: rgba(255, 255, 0, 0.07); */
 }
+
+/* Text in content --Start */
+div.content h1 {
+  font-weight: 600;
+  font-size: 4.5rem;
+
+  background: #f6f6f7;
+  background: linear-gradient(to bottom, #f6f6f7 0%, #7e808f 100%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div.content p {
+  width: 80%;
+  margin-top: 3.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #8f9bb7;
+}
+/* Text in content --End */
+/* Buttons in content --Start */
+div.content button {
+  margin: 3.5rem 1rem;
+}
+/* Buttons in content --End */
+
 /* Container div --End */
 /* Background div --Start */
 div.left-side {
@@ -105,9 +159,8 @@ div.left-side {
 
   position: relative;
   z-index: -1;
- 
 }
-div.left-bg{
+div.left-bg {
   width: 100%;
   height: 100%;
 
@@ -115,13 +168,16 @@ div.left-bg{
   bottom: 25%;
   right: 40%;
 
-  background: radial-gradient(circle, rgba(114,20,255,.15) 0%, transparent 50%);
+  background: radial-gradient(
+    circle,
+    rgba(114, 20, 255, 0.15) 0%,
+    transparent 50%
+  );
 
   z-index: -2;
- 
 }
 div.right-side {
-  width: 50%; 
+  width: 50%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -129,17 +185,20 @@ div.right-side {
   z-index: -1;
 }
 
-div.right-bg{
+div.right-bg {
   width: 100%;
   height: 100%;
   bottom: 10%;
   position: absolute;
   left: 40%;
 
-  background: radial-gradient(circle, rgba(50,202,253,.1) 0%, transparent 50%);
+  background: radial-gradient(
+    circle,
+    rgba(50, 202, 253, 0.1) 0%,
+    transparent 50%
+  );
 
   z-index: -2;
- 
 }
 /* Background div --End */
 
